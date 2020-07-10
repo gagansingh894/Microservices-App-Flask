@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+    api:
+        build: ./App/API
+        container_name: apigateway
+        network_mode: host
+    
+    ms1:
+        build: ./App/MS1
+        container_name: booksms
+        network_mode: host        
+
+    ms2:
+        build: ./App/MS2 
+        container_name: customersms
+        network_mode: host
+
+    ms3:
+        build: ./App/MS3
+        container_name: ordersms
+        network_mode: host
